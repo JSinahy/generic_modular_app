@@ -33,4 +33,8 @@ object Dependencies {
     // Logging
     val androidHttp3Loggin by lazy { "com.squareup.okhttp3:logging-interceptor:${Versions.versionAndroidHttp3Logging}" }
 
+    // Hilt
+    val androidHiltCore by lazy { "com.google.dagger:hilt-android:${Versions.androidHilt}" }
+    val androidHiltCompiler by lazy { "com.google.dagger:hilt-compiler:${Versions.androidHilt}" }
+
 }

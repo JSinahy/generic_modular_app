@@ -1,7 +1,9 @@
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
-    id("kotlin-kapt")
+    id("com.google.dagger.hilt.android")
+    id("dagger.hilt.android.plugin")
+    kotlin("kapt")
 }
 
 android {
@@ -31,6 +33,9 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -54,4 +59,8 @@ dependencies {
     implementation(Dependencies.androidInterceptor)
     implementation(Dependencies.androidCoroutinesKotlinx)
     implementation(Dependencies.androidCoroutinesKotlinxCore)
+
+    // Hilt
+    implementation(Dependencies.androidHiltCore)
+    kapt(Dependencies.androidHiltCompiler)
 }

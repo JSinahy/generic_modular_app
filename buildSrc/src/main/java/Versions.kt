@@ -24,5 +24,9 @@ object Versions {
     // Logging
     val versionAndroidHttp3Logging = "4.9.1"
 
+    //Hilt
+    // Hilt
+    val androidHilt = "2.49"
+
 
 }
